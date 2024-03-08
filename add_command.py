@@ -1,7 +1,13 @@
 import requests
+
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+
 url = "https://discord.com/api/v10/applications/1215275797775122513/guilds/747563555884367902/commands"
 headers = {
-    "Authorization": "Bot MTIxNTI3NTc5Nzc3NTEyMjUxMw.GoXsr5.khPlGWUNg_QserCh6bX--xpHoHzmN7mSn_puqU"
+    "Authorization": f"Bot {TOKEN}"
 }
 
 json = {
