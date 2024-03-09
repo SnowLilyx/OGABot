@@ -2,6 +2,7 @@ import requests
 
 from dotenv import load_dotenv
 
+# Load token from .env file to avoid sharing secret info
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -10,6 +11,7 @@ headers = {
     "Authorization": f"Bot {TOKEN}"
 }
 
+# Slash command data
 json = {
     "name": "reportkill",
     "type": 1,
